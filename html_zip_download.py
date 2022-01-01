@@ -20,6 +20,7 @@ with open('./top_2016.html', 'r') as f:
             links2.append(i)
     print(len(links2))
 
+    links3 = links2[:2]
 
     output_dir = r'G:/top_images'
     for i in links2:
