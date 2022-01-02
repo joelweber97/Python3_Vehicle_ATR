@@ -17,12 +17,13 @@ top_2016 imagery has a spatial resolution of .5 meters
 """
 
 
-print('\nNamed with wildcard *:')
-files = glob.glob('./full_images/unzipped/*.jp2')
-random.shuffle(files)
+#print('\nNamed with wildcard *:')
+#files = glob.glob('G:/top_images/top15-50cm_48397_nc-cir/*.jp2')
+#random.shuffle(files)
 
-for i in files:
-    im = cv2.imread(i)
-    #cv2.imshow('test', im)
+#for i in files:
+#    im = cv2.imread(i)
+#    #cv2.imshow('test', im)
 
+im = cv2.imread('G:/top_images/top15-50cm_48397_nc-cir/top15-nc-cir-50cm-rockwall_48397.jp2')
 

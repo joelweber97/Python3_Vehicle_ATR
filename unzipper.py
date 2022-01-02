@@ -8,9 +8,11 @@ def un_zipFiles(path):
             filePath=path+'/'+file
             zip_file = zipfile.ZipFile(filePath)
             for names in zip_file.namelist():
+                print(names)
                 outpath = os.path.join(path, 'unzipped')
                 zip_file.extract(names,outpath)
             zip_file.close() 
+            os.remove(os.path.join(path, file))
 
 
-un_zipFiles('/Users/joelweber/github/Python3_Vehicle_ATR/full_images')
+un_zipFiles('G:/top_images/test')

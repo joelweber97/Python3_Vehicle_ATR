@@ -21,14 +21,21 @@ with open('./top_2016.html', 'r') as f:
     print(len(links2))
 
     links3 = links2[:2]
-
+    count = 1
     output_dir = r'G:/top_images'
     for i in links2:
+        print(count)
         print(i)
         name = i.split('/')[-1]
         print(name)
-        print(os.path.join(output_dir, name))
-        wget.download(i, os.path.join(output_dir, name))
+        output_file = os.path.join(output_dir, name)
+        print(output_file, output_dir)
+        count += 1
+        if os.path.exists(output_file):
+            pass
+        else:
+            wget.download(i, output_file)
+        
 
 
 '''
