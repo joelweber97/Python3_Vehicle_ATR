@@ -25,5 +25,7 @@ top_2016 imagery has a spatial resolution of .5 meters
 #    im = cv2.imread(i)
 #    #cv2.imshow('test', im)
 
-im = cv2.imread('G:/top_images/top15-50cm_48397_nc-cir/top15-nc-cir-50cm-rockwall_48397.jp2')
+im = cv2.imread('G:/top_images/top15-50cm_48397_nc-cir/cropped_tiles/cropped_tiles.115.tif')
 
+cv2.imshow('image', im)
+cv2.waitKey(0)
