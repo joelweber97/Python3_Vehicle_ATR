@@ -1,5 +1,4 @@
 import os
-os.environ['OPENCV_IO_ENABLE_JASPER']='True'
 import glob
 import numpy
 import random
@@ -25,7 +24,10 @@ top_2016 imagery has a spatial resolution of .5 meters
 #    im = cv2.imread(i)
 #    #cv2.imshow('test', im)
 
-im = cv2.imread('G:/top_images/top15-50cm_48397_nc-cir/cropped_tiles/cropped_tiles.115.tif')
+im = cv2.imread('G:/top_images/top15-50cm_48397_nc-cir/cropped_tiles/cropped_tiles.115.tif', 0)
 
-cv2.imshow('image', im)
-cv2.waitKey(0)
+#cv2.imshow('image', im)
+#cv2.waitKey(0)
+
+
+im.
