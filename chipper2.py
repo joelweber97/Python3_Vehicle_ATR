@@ -7,7 +7,7 @@ pull the points that fall within that image, extract +- 6 meters in each directi
 to get the extents of the extract, and then extract the image, and then save it into a 
 new directory for use in the cnn.
 """
-
+'''
 #export OPENCV_IO_ENABLE_JASPER = true
 import os
 os.environ['OPENCV_IO_ENABLE_JASPER'] = 'true'
@@ -29,7 +29,7 @@ shp2['maxy'] = shp2['ycoord'] + 6
 
 shp2['box'] = shp2.apply(lambda x: box(x['minx'], x['miny'], x['maxx'], x['maxy']), axis = 1)
 print(shp2.head())
-
+'''
 import gdal
 
 gdal.Open('G:/top_images/top15-50cm_48023_nc-cir/top15-nc-cir-50cm-baylor_48023.jp2')
