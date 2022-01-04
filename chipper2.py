@@ -18,12 +18,13 @@ from shapely.geometry import box
 
 shp2 = gpd.read_file('vehicle_points2.shp')
 
-
+#create a geometry column consisting of the bounding box of +- 6 meters from each vehicle centroid.
+#this boxes will be used to clip each of the rasters into smaller images to be used to train the cnn.
 shp2['minx'] = shp2['xcoord'] - 6
 shp2['maxx'] = shp2['xcoord'] + 6
 shp2['miny'] = shp2['ycoord'] -6
 shp2['maxy'] = shp2['ycoord'] + 6
 
-
 shp2['box'] = shp2.apply(lambda x: box(x['minx'], x['miny'], x['maxx'], x['maxy']), axis = 1)
 print(shp2.head())
+
